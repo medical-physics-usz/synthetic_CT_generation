@@ -1,7 +1,7 @@
 # MR-based synthetic CT generation towards MR-only radiotherapy
 
 ## CODE REFACTORING IS IN PROGRESS
-All will be done like for: preprocessing/CT_MR_preprocessing.py
+All will be done like for: [CT_MR_preprocessing.py](preprocessing/CT_MR_preprocessing.py)
 ![Refactoring is in progress](https://www.giastinchi.com/assets/work-in-progress.jpg)
 
 ## Clone our repository
