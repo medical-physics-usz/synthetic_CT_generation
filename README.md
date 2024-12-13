@@ -1,9 +1,5 @@
 # MR-based synthetic CT generation towards MR-only radiotherapy
 
-## CODE REFACTORING IS IN PROGRESS
-All will be done like for: [CT_MR_preprocessing.py](preprocessing/CT_MR_preprocessing.py)
-![Refactoring is in progress](https://www.giastinchi.com/assets/work-in-progress.jpg)
-
 ## Clone our repository
 - Clone this repository:
 ```bash
@@ -12,7 +8,6 @@ cd sCT_generation
 ```
 
 ## Set up environment
-<TBD: one env: check that all works with python 3.7>
 1)  ```conda env create --file sCT_env.yml ```
 2)  ```conda env create --file sCT_pytorch_env.yml ```
 3) If the intensity normalization package has not been installed correctly:
@@ -29,7 +24,7 @@ or check instructions here https://github.com/jcreinhold/intensity-normalization
 * extraction of delineated set of organs for tissue-based intensity normalisation (based on STRUCT: ['liver'],['water','bladder','gallbladder', 'water_or'] ) + (“fat” extracted from CT_reg based on HU: pixels with intensities in [-160;-60])
 * extraction of tumour mask with the biggest delineated volume out of following tags ['ptv2_vX_1a'], or ['ptv1_vX_xa'] and take the biggest
 * creates NIFTIs for every treatment and modality with all background pixels set to 0 or -1024
-
+* check cmd parameters
  ```
 !python -u CT_MR_preprocessing.py "$@"
  ```
@@ -43,6 +38,7 @@ or check instructions here https://github.com/jcreinhold/intensity-normalization
 * desired_voxel_size_z =3
 * background_mri=0
 * background_ct=-1024
+* check cmd parameters
  ```
 !python -u resampling.py "$@"
  ```
@@ -68,7 +64,6 @@ python -u /CUT/niftitodicom.py "$@"
  ```
 
 ## Train the models
-<TBD:viewray issue-> final train-test split>
 Change directory:
  ```bash
 cd CUT
@@ -82,7 +77,6 @@ cd CUT
 
 !python train.py --dataroot data/pix2pix_test_nifti/data_AB --name nifti_NEW_sCT_CUT_whole_data_pix2pix --model pix2pix --direction BtoA --input_nc 1 --output_nc 1
  ```
-<TBD:change direction of training> 
 
 ### CycleGAN
  ```
@@ -115,11 +109,7 @@ To obtain the synthetic CT images, the steps to reproduce are the following:
 !python test.py --dataroot 'data/model_test_nifti/test' --phase test  --name nifti_sCT_CUT_cut --model cut --CUT_mode CUT --input_nc 1 --output_nc 1
  ```
 After testing is completed, the results will be shown under the results folder in the repository directory
-<TBD:results as nifti files>
-
-<TBD:Fréchet_distance>
-
-
 
 ## Calculate DVH differences: dCT-sCT
-TBD
+Install MatRAD from: https://github.com/e0404/matRad
+Replace corresponding files from the DVH calculation repo and pass your parameters for plan calcs and tumour\OAR structure selection
