@@ -1,5 +1,17 @@
 # MR-based synthetic CT generation towards MR-only radiotherapy
 
+## Installing Pix2Pix, CycleGAN, and CUT
+
+### Clone the Original Repositories and Modify Data Handling for NIfTI Compatibility
+Download the official implementations from the original papers:
+
+- **CUT (Contrastive Unpaired Translation)**: [GitHub Repository](https://github.com/taesungp/contrastive-unpaired-translation)
+- **Pix2Pix & CycleGAN**: [GitHub Repository](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+- Replace the scripts in the `data/` folder to enable compatibility with **NIfTI** files instead of eg, PNGs.
+- Ensure that the pipeline correctly reads and processes single-channel NIfTI images rather than three-channel RGB PNGs.
+- Follow the **preprocessing and postprocessing scripts** from our repository to prepare **MR and CT** input data and process generated synthetic CTs.  
+
+
 ## Clone our repository
 - Clone this repository:
 ```bash
