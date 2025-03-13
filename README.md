@@ -1,5 +1,5 @@
 # MR-based synthetic CT generation towards MR-only radiotherapy
-
+![Demo Training set size GIF](training_set_size_example.gif)
 ## Installing Pix2Pix, CycleGAN, and CUT
 
 ### Clone the Original Repositories and Modify Data Handling for NIfTI Compatibility
@@ -125,3 +125,19 @@ After testing is completed, the results will be shown under the results folder i
 ## Calculate DVH differences: dCT-sCT
 Install MatRAD from: https://github.com/e0404/matRad
 Replace corresponding files from the DVH calculation repo and pass your parameters for plan calcs and tumour\OAR structure selection
+
+
+# Citation
+
+If you use this code for your research, please cite our paper. As our current paper "A comprehensive comparative study of GANs for sCT generation in the abdomen" is under review, please cite our preliminary work, on which this code is based on:  
+
+```bibtex
+@article{lapaeva2022synthetic,
+  title={Synthetic computed tomography for low-field magnetic resonance-guided radiotherapy in the abdomen},
+  author={Lapaeva, Mariia and Saint-Esteven, Agustina La Greca and Wallimann, Philipp and G{\"u}nther, Manuel and Konukoglu, Ender and Andratschke, Nicolaus and Guckenberger, Matthias and Tanadini-Lang, Stephanie and Dal Bello, Riccardo},
+  journal={Physics and Imaging in Radiation Oncology},
+  volume={24},
+  pages={173--179},
+  year={2022},
+  publisher={Elsevier}
+}
