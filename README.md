@@ -92,12 +92,12 @@ cd CUT
 
 ### CycleGAN
  ```
-!python train.py --dataroot 'data/model_test_nifti/train' --name nifti_New_sCT_CUT_cyclegan --model cycle_gan --input_nc 1 --output_nc 1 ```
+!python train.py --dataroot 'data/model_test_nifti/train' --name nifti_New_sCT_CUT_cyclegan --model cycle_gan --input_nc 1 --output_nc 1
   ```
  
  ### CUT
  ```bash
-!python train.py --dataroot '/data/model_test_nifti/train' --name nifti_sCT_CUT_cut --model cut --CUT_mode CUT --input_nc 1 --output_nc 1
+!python train.py --dataroot 'data/model_test_nifti/train' --name nifti_sCT_CUT_cut --model cut --CUT_mode CUT --input_nc 1 --output_nc 1
  ```
 
 
