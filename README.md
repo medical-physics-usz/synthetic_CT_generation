@@ -126,18 +126,23 @@ After testing is completed, the results will be shown under the results folder i
 Install MatRAD from: https://github.com/e0404/matRad
 Replace corresponding files from the DVH calculation repo and pass your parameters for plan calcs and tumour\OAR structure selection
 
+🚀 **[NEW]** The dosimetric calculation pipeline [matRad_example19_CT_sCT_DVH_difference_photons.m] is available on the develop branch of matRad [![Dosimetric Pipeline](https://img.shields.io/badge/matRad-Develop%20Branch-blue?logo=github)](https://github.com/e0404/matRad/blob/dev/examples/matRad_example19_CT_sCT_DVH_difference_photons.m)  
 
 # Citation
 
-If you use this code for your research, please cite our paper. As our current paper "A comprehensive comparative study of GANs for sCT generation in the abdomen" is under review, please cite our preliminary work, on which this code is based on:  
+If you use this code for your research, please cite our paper. 
 
 ```bibtex
-@article{lapaeva2022synthetic,
-  title={Synthetic computed tomography for low-field magnetic resonance-guided radiotherapy in the abdomen},
-  author={Lapaeva, Mariia and Saint-Esteven, Agustina La Greca and Wallimann, Philipp and G{\"u}nther, Manuel and Konukoglu, Ender and Andratschke, Nicolaus and Guckenberger, Matthias and Tanadini-Lang, Stephanie and Dal Bello, Riccardo},
-  journal={Physics and Imaging in Radiation Oncology},
-  volume={24},
-  pages={173--179},
-  year={2022},
-  publisher={Elsevier}
+@article{https://doi.org/10.1002/mp.18038,
+author = {Lapaeva, Mariia and La Greca Saint-Esteven, Agustina and Wallimann, Philipp and Andratschke, Nicolaus and Guckenberger, Matthias and Günther, Manuel and Tanadini-Lang, Stephanie and Dal Bello, Riccardo},
+title = {A comprehensive comparative study of generative adversarial network architectures for synthetic computed tomography generation in the abdomen},
+journal = {Medical Physics},
+volume = {52},
+number = {8},
+pages = {e18038},
+keywords = {deep learning, generative adversarial networks, medical image analysis, MR-only radiotherapy, synthetic CT},
+doi = {https://doi.org/10.1002/mp.18038},
+url = {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.18038},
+eprint = {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1002/mp.18038},
+year = {2025}
 }
